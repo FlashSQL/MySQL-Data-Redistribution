@@ -7,7 +7,10 @@ While B-Tree is a ubiquitous index structure used in managing data, it is well k
 Our evaluation results from running OLTP benchmarks using the optimized MySQL/InnoDB prototype clearly show that those optimizations improve transaction throughput (i.e., more than 50%) with less space and cost (i.e., less than 40%) in flash storage.
 
 ### Experiment Result
+- TPCC-Result
 ![image](https://user-images.githubusercontent.com/55489991/145993724-fc77122f-f276-4b74-81bb-e98004c64339.png)
+- Index Space Utilization
+![image](https://user-images.githubusercontent.com/55489991/145993926-a14f3b45-36a9-45f7-b4f7-4275c6f46a6f.png)
 
 
 ## Prerequisites & Installation Guide
