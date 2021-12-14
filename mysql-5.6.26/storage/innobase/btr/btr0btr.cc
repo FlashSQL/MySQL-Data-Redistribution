@@ -3693,10 +3693,7 @@ func_start:
 	ut_ad(!page_is_empty(page));
 	
 
-
-	/* lbh */	
-	/* try to redistribute to neighbor page if possible before split */
-
+	// current evaluation is based on TPC-C benchmark
 	ibool tpcc_table = FALSE;
 
 	if(buf_block_get_space(btr_cur_get_block(cursor)) ==srv_ol_space_id
@@ -3713,20 +3710,20 @@ func_start:
 		return(rec);
 	}
 	
+	/* lbh */	
+	/* try to redistribute to neighbor page if possible before split */
+	//call data redistribution before split
 
 	if (tpcc_table &&  page_is_leaf(page)){
 		rec = btr_page_redistribute_before_split(flags, cursor, offsets, *heap, tuple, n_ext, mtr);
 
 		if(rec!=NULL){
-			//ib_logf(IB_LOG_LEVEL_INFO, "redistribute succeed");
-			return(rec);
-			
-		}
-		else{
-			ib_logf(IB_LOG_LEVEL_INFO, "redistribute failed");
+			//redistribute succeed
+			return(rec);			
+		}else{
+			//redistribute failed
 		}
 	}
-
 
 	/* end */
 
