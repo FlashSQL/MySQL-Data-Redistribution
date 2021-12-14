@@ -1,0 +1,146 @@
+210217 16:17:10 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210217 16:17:10 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210220 23:12:37 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210220 23:12:37 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210220 23:14:12 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210220 23:14:24 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210220 23:14:24 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210221 13:06:21 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210224 18:44:52 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210224 18:44:52 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210224 18:45:50 mysqld_safe Number of processes running now: 0
+210224 18:45:50 mysqld_safe mysqld restarted
+210224 18:48:10 mysqld_safe Number of processes running now: 0
+210224 18:48:10 mysqld_safe mysqld restarted
+210224 18:53:51 mysqld_safe Number of processes running now: 0
+210224 18:53:51 mysqld_safe mysqld restarted
+210224 18:56:31 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210224 19:03:00 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210224 19:03:00 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210224 19:03:06 mysqld_safe Number of processes running now: 0
+210224 19:03:06 mysqld_safe mysqld restarted
+210224 19:03:26 mysqld_safe Number of processes running now: 0
+210224 19:03:26 mysqld_safe mysqld restarted
+210224 19:04:25 mysqld_safe Number of processes running now: 0
+210224 19:04:25 mysqld_safe mysqld restarted
+210224 19:04:32 mysqld_safe Number of processes running now: 0
+210224 19:04:32 mysqld_safe mysqld restarted
+210224 19:04:49 mysqld_safe Number of processes running now: 0
+210224 19:04:49 mysqld_safe mysqld restarted
+210224 19:06:31 mysqld_safe Number of processes running now: 0
+210224 19:06:31 mysqld_safe mysqld restarted
+210224 19:06:38 mysqld_safe Number of processes running now: 0
+210224 19:06:38 mysqld_safe mysqld restarted
+210224 19:06:57 mysqld_safe Number of processes running now: 0
+210224 19:06:57 mysqld_safe mysqld restarted
+210224 19:07:29 mysqld_safe Number of processes running now: 0
+210224 19:07:29 mysqld_safe mysqld restarted
+210224 19:07:35 mysqld_safe Number of processes running now: 0
+210224 19:07:35 mysqld_safe mysqld restarted
+210224 19:07:41 mysqld_safe Number of processes running now: 0
+210224 19:07:41 mysqld_safe mysqld restarted
+210224 19:07:47 mysqld_safe Number of processes running now: 0
+210224 19:07:47 mysqld_safe mysqld restarted
+210224 19:07:54 mysqld_safe Number of processes running now: 0
+210224 19:07:54 mysqld_safe mysqld restarted
+210224 19:08:12 mysqld_safe Number of processes running now: 0
+210224 19:08:12 mysqld_safe mysqld restarted
+210224 19:08:18 mysqld_safe Number of processes running now: 0
+210224 19:08:18 mysqld_safe mysqld restarted
+210224 19:08:24 mysqld_safe Number of processes running now: 0
+210224 19:08:24 mysqld_safe mysqld restarted
+210224 19:08:32 mysqld_safe Number of processes running now: 0
+210224 19:08:32 mysqld_safe mysqld restarted
+210224 19:08:42 mysqld_safe Number of processes running now: 0
+210224 19:08:42 mysqld_safe mysqld restarted
+210224 19:08:47 mysqld_safe Number of processes running now: 0
+210224 19:08:47 mysqld_safe mysqld restarted
+210224 19:08:51 mysqld_safe Number of processes running now: 0
+210224 19:08:51 mysqld_safe mysqld restarted
+210224 19:09:09 mysqld_safe Number of processes running now: 0
+210224 19:09:09 mysqld_safe mysqld restarted
+210224 19:09:14 mysqld_safe Number of processes running now: 0
+210224 19:09:14 mysqld_safe mysqld restarted
+210224 19:09:34 mysqld_safe Number of processes running now: 0
+210224 19:09:34 mysqld_safe mysqld restarted
+210224 19:09:44 mysqld_safe Number of processes running now: 0
+210224 19:09:44 mysqld_safe mysqld restarted
+210224 19:09:52 mysqld_safe Number of processes running now: 0
+210224 19:09:52 mysqld_safe mysqld restarted
+210224 19:09:59 mysqld_safe Number of processes running now: 0
+210224 19:09:59 mysqld_safe mysqld restarted
+210224 19:10:49 mysqld_safe Number of processes running now: 0
+210224 19:10:49 mysqld_safe mysqld restarted
+210224 19:11:00 mysqld_safe Number of processes running now: 0
+210224 19:11:00 mysqld_safe mysqld restarted
+210225 13:17:02 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210303 22:05:51 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210303 22:05:51 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210305 22:41:33 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210305 23:42:22 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210305 23:42:22 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210308 00:27:27 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210308 01:08:40 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210308 01:08:40 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210308 14:12:03 mysqld_safe Number of processes running now: 0
+210308 14:12:03 mysqld_safe mysqld restarted
+210308 14:12:03 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210308 14:56:29 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210308 14:56:29 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210309 01:26:58 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210309 02:08:06 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210309 02:08:06 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210309 13:13:51 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210309 13:53:09 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210309 13:53:09 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210310 00:24:25 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210310 01:11:42 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210310 01:11:42 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210312 01:19:05 mysqld_safe Number of processes running now: 0
+210312 01:19:05 mysqld_safe mysqld restarted
+210312 01:19:06 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210324 17:05:25 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210324 17:05:25 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210420 13:25:28 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210420 13:25:29 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210420 15:32:04 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210512 23:33:55 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210512 23:33:55 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210513 15:38:08 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210514 00:54:07 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210514 00:54:07 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210514 09:28:36 mysqld_safe Number of processes running now: 0
+210514 09:28:36 mysqld_safe mysqld restarted
+210514 13:16:21 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210629 20:15:39 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210629 20:15:39 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210630 10:34:43 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210630 23:13:02 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210630 23:13:02 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210630 23:46:29 mysqld_safe Number of processes running now: 0
+210630 23:46:29 mysqld_safe mysqld restarted
+210630 23:46:29 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+210701 10:58:51 mysqld_safe Logging to '/home/lbh/test_data/mysql_error.log'.
+210701 10:58:51 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210701 14:42:59 mysqld_safe Number of processes running now: 0
+210701 14:42:59 mysqld_safe mysqld restarted
+210701 14:43:00 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+sed: -e expression #1, char 25: unknown option to `s'
+210909 20:08:00 mysqld_safe Logging to '/home/lbh/mysql-5.6.26/data/lbh-server.err'.
+210909 20:08:00 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+210909 20:08:01 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
+Warning: World-writable config file '/home/lbh/scripts/my0.cnf' is ignored
+Warning: World-writable config file '/home/lbh/scripts/my0.cnf' is ignored
+210909 20:09:17 mysqld_safe Logging to '/home/lbh/mysql-5.6.26/data/lbh-server.err'.
+210909 20:09:17 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+210909 20:09:18 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
+210909 20:11:09 mysqld_safe Logging to '/home/lbh/mysql_error.log'.
+210909 20:11:09 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data/
+210914 11:18:32 mysqld_safe mysqld from pid file /home/lbh/test_data/mysql.pid ended
+211112 14:57:46 mysqld_safe Logging to '/home/lbh/mysql_error.log'.
+211112 14:57:46 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data3/
+chown: invalid user: ‘mysql’
+211115 10:24:02 mysqld_safe mysqld from pid file /home/lbh/test_data3/mysql.pid ended
+211115 14:33:57 mysqld_safe Logging to '/home/lbh/mysql_error.log'.
+211115 14:33:57 mysqld_safe Starting mysqld daemon with databases from /home/lbh/test_data3/
+211118 13:58:48 mysqld_safe mysqld from pid file /home/lbh/test_data3/mysql.pid ended

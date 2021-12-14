@@ -1,0 +1,20 @@
+200911 16:43:14 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Could not open required defaults file: /home/lbh/scipts/my4.cnf
+Fatal error in defaults handling. Program aborted
+200911 16:43:14 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-Z170X-UD5.pid ended
+201017 17:11:08 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Could not open required defaults file: /home/lbh/scripts/my0.c
+Fatal error in defaults handling. Program aborted
+201017 17:11:08 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-Z170X-UD5.pid ended
+201117 14:59:24 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Could not open required defaults file: /home/lbh/my1.cnf
+Fatal error in defaults handling. Program aborted
+201117 14:59:25 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-Z170X-UD5.pid ended
+201117 15:00:39 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Could not open required defaults file: /home/lbh/my1.cnf
+Fatal error in defaults handling. Program aborted
+201117 15:00:39 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-Z170X-UD5.pid ended
+201117 15:01:24 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Could not open required defaults file: /home/lbh/my4.cnf
+Fatal error in defaults handling. Program aborted
+201117 15:01:24 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-Z170X-UD5.pid ended

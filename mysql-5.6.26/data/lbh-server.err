@@ -1,0 +1,392 @@
+201210 16:26:54 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Could not open required defaults file: /home/lbh/my4.cnf
+Fatal error in defaults handling. Program aborted
+201210 16:26:54 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
+210225 13:24:51 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Could not open required defaults file: /home/lbh/scripts/my0.cn
+Fatal error in defaults handling. Program aborted
+210225 13:24:51 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
+210909 20:08:00 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+2021-09-09 20:08:01 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-09-09 20:08:01 0 [Note] /home/lbh/mysql-5.6.26/bin/mysqld (mysqld 5.6.26) starting as process 14023 ...
+2021-09-09 20:08:01 14023 [Warning] Buffered warning: Changed limits: max_open_files: 4096 (requested 5000)
+
+2021-09-09 20:08:01 14023 [Warning] Buffered warning: Changed limits: table_open_cache: 1967 (requested 2000)
+
+2021-09-09 20:08:01 14023 [Note] Plugin 'FEDERATED' is disabled.
+/home/lbh/mysql-5.6.26/bin/mysqld: Table 'mysql.plugin' doesn't exist
+2021-09-09 20:08:01 14023 [ERROR] Can't open the mysql.plugin table. Please run mysql_upgrade to create it.
+2021-09-09 20:08:01 14023 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2021-09-09 20:08:01 14023 [Note] InnoDB: The InnoDB memory heap is disabled
+2021-09-09 20:08:01 14023 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-09-09 20:08:01 14023 [Note] InnoDB: Memory barrier is not used
+2021-09-09 20:08:01 14023 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-09-09 20:08:01 14023 [Note] InnoDB: Using Linux native AIO
+2021-09-09 20:08:01 14023 [Note] InnoDB: Using CPU crc32 instructions
+2021-09-09 20:08:01 14023 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2021-09-09 20:08:01 14023 [Note] InnoDB: Completed initialization of buffer pool
+2021-09-09 20:08:01 14023 [Note] InnoDB: The first specified data file ./ibdata1 did not exist: a new database to be created!
+2021-09-09 20:08:01 14023 [Note] InnoDB: Setting file ./ibdata1 size to 12 MB
+2021-09-09 20:08:01 14023 [Note] InnoDB: Database physically writes the file full: wait...
+2021-09-09 20:08:01 14023 [Note] InnoDB: Setting log file ./ib_logfile101 size to 48 MB
+2021-09-09 20:08:01 14023 [Note] InnoDB: Setting log file ./ib_logfile1 size to 48 MB
+./ibdata1: 0
+./ib_logfile101: 4294967280
+./ib_logfile1: 4294967280
+2021-09-09 20:08:01 14023 [Note] InnoDB: Renaming log file ./ib_logfile101 to ./ib_logfile0
+./ib_logfile0: 4294967280
+./ib_logfile1: 4294967280
+2021-09-09 20:08:01 14023 [Warning] InnoDB: New log files created, LSN=45781
+2021-09-09 20:08:01 14023 [Note] InnoDB: Doublewrite buffer not found: creating new
+2021-09-09 20:08:01 14023 [Note] InnoDB: Doublewrite buffer created
+2021-09-09 20:08:01 14023 [Note] InnoDB: 128 rollback segment(s) are active.
+2021-09-09 20:08:01 14023 [Warning] InnoDB: Creating foreign key constraint system tables.
+2021-09-09 20:08:01 14023 [Note] InnoDB: Foreign key constraint system tables created
+2021-09-09 20:08:01 14023 [Note] InnoDB: Creating tablespace and datafile system tables.
+2021-09-09 20:08:01 14023 [Note] InnoDB: Tablespace and datafile system tables created.
+2021-09-09 20:08:01 14023 [Note] InnoDB: Waiting for purge to start
+2021-09-09 20:08:01 14023 [Note] InnoDB: 5.6.26 started; log sequence number 0
+2021-09-09 20:08:01 14023 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: 327b92cf-115e-11ec-a41c-a0423f41762e.
+2021-09-09 20:08:01 14023 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-09-09 20:08:01 14023 [Note] IPv6 is available.
+2021-09-09 20:08:01 14023 [Note]   - '::' resolves to '::';
+2021-09-09 20:08:01 14023 [Note] Server socket created on IP: '::'.
+2021-09-09 20:08:01 14023 [ERROR] Fatal error: Can't open and lock privilege tables: Table 'mysql.user' doesn't exist
+210909 20:08:01 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
+210909 20:09:17 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Warning: World-writable config file '/home/lbh/scripts/my0.cnf' is ignored
+2021-09-09 20:09:18 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-09-09 20:09:18 0 [Note] /home/lbh/mysql-5.6.26/bin/mysqld (mysqld 5.6.26) starting as process 14274 ...
+2021-09-09 20:09:18 14274 [Warning] Buffered warning: Changed limits: max_open_files: 4096 (requested 5000)
+
+2021-09-09 20:09:18 14274 [Warning] Buffered warning: Changed limits: table_open_cache: 1967 (requested 2000)
+
+2021-09-09 20:09:18 14274 [Note] Plugin 'FEDERATED' is disabled.
+/home/lbh/mysql-5.6.26/bin/mysqld: Table 'mysql.plugin' doesn't exist
+2021-09-09 20:09:18 14274 [ERROR] Can't open the mysql.plugin table. Please run mysql_upgrade to create it.
+2021-09-09 20:09:18 14274 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2021-09-09 20:09:18 14274 [Note] InnoDB: The InnoDB memory heap is disabled
+2021-09-09 20:09:18 14274 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-09-09 20:09:18 14274 [Note] InnoDB: Memory barrier is not used
+2021-09-09 20:09:18 14274 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-09-09 20:09:18 14274 [Note] InnoDB: Using Linux native AIO
+2021-09-09 20:09:18 14274 [Note] InnoDB: Using CPU crc32 instructions
+2021-09-09 20:09:18 14274 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2021-09-09 20:09:18 14274 [Note] InnoDB: Completed initialization of buffer pool
+./ibdata1: 0
+./ib_logfile0: 4294967280
+./ib_logfile1: 4294967280
+2021-09-09 20:09:18 14274 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-09-09 20:09:18 14274 [Note] InnoDB: Log scan progressed past the checkpoint lsn 49463
+2021-09-09 20:09:18 14274 [Note] InnoDB: Database was not shutdown normally!
+2021-09-09 20:09:18 14274 [Note] InnoDB: Starting crash recovery.
+2021-09-09 20:09:18 14274 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2021-09-09 20:09:18 14274 [Note] InnoDB: Restoring possible half-written data pages 
+2021-09-09 20:09:18 14274 [Note] InnoDB: from the doublewrite buffer...
+InnoDB: Doing recovery: scanned up to log sequence number 1600607
+2021-09-09 20:09:18 14274 [Note] InnoDB: Starting an apply batch of log records to the database...
+InnoDB: Progress in percent: 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 
+InnoDB: Apply batch completed
+2021-09-09 20:09:18 14274 [Note] InnoDB: 128 rollback segment(s) are active.
+2021-09-09 20:09:18 14274 [Note] InnoDB: Waiting for purge to start
+2021-09-09 20:09:18 14274 [Note] InnoDB: 5.6.26 started; log sequence number 1600607
+2021-09-09 20:09:18 14274 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-09-09 20:09:18 14274 [Note] IPv6 is available.
+2021-09-09 20:09:18 14274 [Note]   - '::' resolves to '::';
+2021-09-09 20:09:18 14274 [Note] Server socket created on IP: '::'.
+2021-09-09 20:09:18 14274 [ERROR] Fatal error: Can't open and lock privilege tables: Table 'mysql.user' doesn't exist
+210909 20:09:18 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
+210909 20:09:37 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Warning: World-writable config file '/home/lbh/scripts/my0.cnf' is ignored
+2021-09-09 20:09:37 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-09-09 20:09:37 0 [Note] /home/lbh/mysql-5.6.26/bin/mysqld (mysqld 5.6.26) starting as process 14412 ...
+2021-09-09 20:09:37 14412 [Warning] Buffered warning: Changed limits: max_open_files: 4096 (requested 5000)
+
+2021-09-09 20:09:37 14412 [Warning] Buffered warning: Changed limits: table_open_cache: 1967 (requested 2000)
+
+2021-09-09 20:09:37 14412 [Note] Plugin 'FEDERATED' is disabled.
+/home/lbh/mysql-5.6.26/bin/mysqld: Table 'mysql.plugin' doesn't exist
+2021-09-09 20:09:37 14412 [ERROR] Can't open the mysql.plugin table. Please run mysql_upgrade to create it.
+2021-09-09 20:09:37 14412 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2021-09-09 20:09:37 14412 [Note] InnoDB: The InnoDB memory heap is disabled
+2021-09-09 20:09:37 14412 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-09-09 20:09:37 14412 [Note] InnoDB: Memory barrier is not used
+2021-09-09 20:09:37 14412 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-09-09 20:09:37 14412 [Note] InnoDB: Using Linux native AIO
+2021-09-09 20:09:37 14412 [Note] InnoDB: Using CPU crc32 instructions
+2021-09-09 20:09:37 14412 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2021-09-09 20:09:37 14412 [Note] InnoDB: Completed initialization of buffer pool
+./ibdata1: 0
+./ib_logfile0: 4294967280
+./ib_logfile1: 4294967280
+2021-09-09 20:09:37 14412 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-09-09 20:09:37 14412 [Note] InnoDB: Log scan progressed past the checkpoint lsn 49463
+2021-09-09 20:09:37 14412 [Note] InnoDB: Database was not shutdown normally!
+2021-09-09 20:09:37 14412 [Note] InnoDB: Starting crash recovery.
+2021-09-09 20:09:37 14412 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2021-09-09 20:09:37 14412 [Note] InnoDB: Restoring possible half-written data pages 
+2021-09-09 20:09:37 14412 [Note] InnoDB: from the doublewrite buffer...
+InnoDB: Doing recovery: scanned up to log sequence number 1600607
+2021-09-09 20:09:37 14412 [Note] InnoDB: Starting an apply batch of log records to the database...
+InnoDB: Progress in percent: 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 
+InnoDB: Apply batch completed
+2021-09-09 20:09:38 14412 [Note] InnoDB: 128 rollback segment(s) are active.
+2021-09-09 20:09:38 14412 [Note] InnoDB: Waiting for purge to start
+2021-09-09 20:09:38 14412 [Note] InnoDB: 5.6.26 started; log sequence number 1600607
+2021-09-09 20:09:38 14412 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-09-09 20:09:38 14412 [Note] IPv6 is available.
+2021-09-09 20:09:38 14412 [Note]   - '::' resolves to '::';
+2021-09-09 20:09:38 14412 [Note] Server socket created on IP: '::'.
+2021-09-09 20:09:38 14412 [ERROR] Fatal error: Can't open and lock privilege tables: Table 'mysql.user' doesn't exist
+210909 20:09:38 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
+210909 20:10:10 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Warning: World-writable config file '/home/lbh/scripts/my0.cnf' is ignored
+2021-09-09 20:10:10 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-09-09 20:10:10 0 [Note] /home/lbh/mysql-5.6.26/bin/mysqld (mysqld 5.6.26) starting as process 14563 ...
+2021-09-09 20:10:10 14563 [Warning] Buffered warning: Changed limits: max_open_files: 4096 (requested 5000)
+
+2021-09-09 20:10:10 14563 [Warning] Buffered warning: Changed limits: table_open_cache: 1967 (requested 2000)
+
+2021-09-09 20:10:10 14563 [Note] Plugin 'FEDERATED' is disabled.
+/home/lbh/mysql-5.6.26/bin/mysqld: Table 'mysql.plugin' doesn't exist
+2021-09-09 20:10:10 14563 [ERROR] Can't open the mysql.plugin table. Please run mysql_upgrade to create it.
+2021-09-09 20:10:10 14563 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2021-09-09 20:10:10 14563 [Note] InnoDB: The InnoDB memory heap is disabled
+2021-09-09 20:10:10 14563 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-09-09 20:10:10 14563 [Note] InnoDB: Memory barrier is not used
+2021-09-09 20:10:10 14563 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-09-09 20:10:10 14563 [Note] InnoDB: Using Linux native AIO
+2021-09-09 20:10:10 14563 [Note] InnoDB: Using CPU crc32 instructions
+2021-09-09 20:10:10 14563 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2021-09-09 20:10:10 14563 [Note] InnoDB: Completed initialization of buffer pool
+./ibdata1: 0
+./ib_logfile0: 4294967280
+./ib_logfile1: 4294967280
+2021-09-09 20:10:10 14563 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-09-09 20:10:10 14563 [Note] InnoDB: Log scan progressed past the checkpoint lsn 49463
+2021-09-09 20:10:10 14563 [Note] InnoDB: Database was not shutdown normally!
+2021-09-09 20:10:10 14563 [Note] InnoDB: Starting crash recovery.
+2021-09-09 20:10:10 14563 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2021-09-09 20:10:10 14563 [Note] InnoDB: Restoring possible half-written data pages 
+2021-09-09 20:10:10 14563 [Note] InnoDB: from the doublewrite buffer...
+InnoDB: Doing recovery: scanned up to log sequence number 1600607
+2021-09-09 20:10:10 14563 [Note] InnoDB: Starting an apply batch of log records to the database...
+InnoDB: Progress in percent: 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 
+InnoDB: Apply batch completed
+2021-09-09 20:10:11 14563 [Note] InnoDB: 128 rollback segment(s) are active.
+2021-09-09 20:10:11 14563 [Note] InnoDB: Waiting for purge to start
+2021-09-09 20:10:11 14563 [Note] InnoDB: 5.6.26 started; log sequence number 1600607
+2021-09-09 20:10:11 14563 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-09-09 20:10:11 14563 [Note] IPv6 is available.
+2021-09-09 20:10:11 14563 [Note]   - '::' resolves to '::';
+2021-09-09 20:10:11 14563 [Note] Server socket created on IP: '::'.
+2021-09-09 20:10:11 14563 [ERROR] Fatal error: Can't open and lock privilege tables: Table 'mysql.user' doesn't exist
+210909 20:10:11 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
+210914 18:56:16 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+2021-09-14 18:56:16 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-09-14 18:56:16 0 [Note] /home/lbh/mysql-5.6.26/bin/mysqld (mysqld 5.6.26) starting as process 8780 ...
+2021-09-14 18:56:16 8780 [Note] Plugin 'FEDERATED' is disabled.
+/home/lbh/mysql-5.6.26/bin/mysqld: Table 'mysql.plugin' doesn't exist
+2021-09-14 18:56:16 8780 [ERROR] Can't open the mysql.plugin table. Please run mysql_upgrade to create it.
+2021-09-14 18:56:16 8780 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2021-09-14 18:56:16 8780 [Note] InnoDB: The InnoDB memory heap is disabled
+2021-09-14 18:56:16 8780 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-09-14 18:56:16 8780 [Note] InnoDB: Memory barrier is not used
+2021-09-14 18:56:16 8780 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-09-14 18:56:16 8780 [Note] InnoDB: Using Linux native AIO
+2021-09-14 18:56:16 8780 [Note] InnoDB: Using CPU crc32 instructions
+2021-09-14 18:56:16 8780 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2021-09-14 18:56:16 8780 [Note] InnoDB: Completed initialization of buffer pool
+./ibdata1: 0
+./ib_logfile0: 4294967280
+./ib_logfile1: 4294967280
+2021-09-14 18:56:16 8780 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-09-14 18:56:16 8780 [Note] InnoDB: Log scan progressed past the checkpoint lsn 49463
+2021-09-14 18:56:16 8780 [Note] InnoDB: Database was not shutdown normally!
+2021-09-14 18:56:16 8780 [Note] InnoDB: Starting crash recovery.
+2021-09-14 18:56:16 8780 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2021-09-14 18:56:16 8780 [Note] InnoDB: Restoring possible half-written data pages 
+2021-09-14 18:56:16 8780 [Note] InnoDB: from the doublewrite buffer...
+InnoDB: Doing recovery: scanned up to log sequence number 1600607
+2021-09-14 18:56:16 8780 [Note] InnoDB: Starting an apply batch of log records to the database...
+InnoDB: Progress in percent: 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 
+InnoDB: Apply batch completed
+2021-09-14 18:56:17 8780 [Note] InnoDB: 128 rollback segment(s) are active.
+2021-09-14 18:56:17 8780 [Note] InnoDB: Waiting for purge to start
+2021-09-14 18:56:17 8780 [Note] InnoDB: 5.6.26 started; log sequence number 1600607
+2021-09-14 18:56:17 8780 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-09-14 18:56:17 8780 [Note] IPv6 is available.
+2021-09-14 18:56:17 8780 [Note]   - '::' resolves to '::';
+2021-09-14 18:56:17 8780 [Note] Server socket created on IP: '::'.
+2021-09-14 18:56:17 8780 [ERROR] Fatal error: Can't open and lock privilege tables: Table 'mysql.user' doesn't exist
+210914 18:56:17 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
+210914 18:56:36 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+2021-09-14 18:56:36 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-09-14 18:56:36 0 [Note] /home/lbh/mysql-5.6.26/bin/mysqld (mysqld 5.6.26) starting as process 8946 ...
+2021-09-14 18:56:36 8946 [Note] Plugin 'FEDERATED' is disabled.
+/home/lbh/mysql-5.6.26/bin/mysqld: Table 'mysql.plugin' doesn't exist
+2021-09-14 18:56:36 8946 [ERROR] Can't open the mysql.plugin table. Please run mysql_upgrade to create it.
+2021-09-14 18:56:36 8946 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2021-09-14 18:56:36 8946 [Note] InnoDB: The InnoDB memory heap is disabled
+2021-09-14 18:56:36 8946 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-09-14 18:56:36 8946 [Note] InnoDB: Memory barrier is not used
+2021-09-14 18:56:36 8946 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-09-14 18:56:36 8946 [Note] InnoDB: Using Linux native AIO
+2021-09-14 18:56:36 8946 [Note] InnoDB: Using CPU crc32 instructions
+2021-09-14 18:56:36 8946 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2021-09-14 18:56:36 8946 [Note] InnoDB: Completed initialization of buffer pool
+./ibdata1: 0
+./ib_logfile0: 4294967280
+./ib_logfile1: 4294967280
+2021-09-14 18:56:36 8946 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-09-14 18:56:36 8946 [Note] InnoDB: Log scan progressed past the checkpoint lsn 49463
+2021-09-14 18:56:36 8946 [Note] InnoDB: Database was not shutdown normally!
+2021-09-14 18:56:36 8946 [Note] InnoDB: Starting crash recovery.
+2021-09-14 18:56:36 8946 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2021-09-14 18:56:36 8946 [Note] InnoDB: Restoring possible half-written data pages 
+2021-09-14 18:56:36 8946 [Note] InnoDB: from the doublewrite buffer...
+InnoDB: Doing recovery: scanned up to log sequence number 1600607
+2021-09-14 18:56:36 8946 [Note] InnoDB: Starting an apply batch of log records to the database...
+InnoDB: Progress in percent: 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 
+InnoDB: Apply batch completed
+2021-09-14 18:56:37 8946 [Note] InnoDB: 128 rollback segment(s) are active.
+2021-09-14 18:56:37 8946 [Note] InnoDB: Waiting for purge to start
+2021-09-14 18:56:37 8946 [Note] InnoDB: 5.6.26 started; log sequence number 1600607
+2021-09-14 18:56:37 8946 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-09-14 18:56:37 8946 [Note] IPv6 is available.
+2021-09-14 18:56:37 8946 [Note]   - '::' resolves to '::';
+2021-09-14 18:56:37 8946 [Note] Server socket created on IP: '::'.
+2021-09-14 18:56:37 8946 [ERROR] Fatal error: Can't open and lock privilege tables: Table 'mysql.user' doesn't exist
+210914 18:56:37 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
+210914 19:03:56 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Warning: World-writable config file '/home/lbh/scripts/my0.cnf' is ignored
+2021-09-14 19:03:56 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-09-14 19:03:56 0 [Note] /home/lbh/mysql-5.6.26/bin/mysqld (mysqld 5.6.26) starting as process 11160 ...
+2021-09-14 19:03:56 11160 [Warning] Buffered warning: Changed limits: max_open_files: 1024 (requested 5000)
+
+2021-09-14 19:03:56 11160 [Warning] Buffered warning: Changed limits: table_open_cache: 431 (requested 2000)
+
+2021-09-14 19:03:56 11160 [Note] Plugin 'FEDERATED' is disabled.
+/home/lbh/mysql-5.6.26/bin/mysqld: Table 'mysql.plugin' doesn't exist
+2021-09-14 19:03:56 11160 [ERROR] Can't open the mysql.plugin table. Please run mysql_upgrade to create it.
+2021-09-14 19:03:56 11160 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2021-09-14 19:03:56 11160 [Note] InnoDB: The InnoDB memory heap is disabled
+2021-09-14 19:03:56 11160 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-09-14 19:03:56 11160 [Note] InnoDB: Memory barrier is not used
+2021-09-14 19:03:56 11160 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-09-14 19:03:56 11160 [Note] InnoDB: Using Linux native AIO
+2021-09-14 19:03:56 11160 [Note] InnoDB: Using CPU crc32 instructions
+2021-09-14 19:03:56 11160 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2021-09-14 19:03:56 11160 [Note] InnoDB: Completed initialization of buffer pool
+./ibdata1: 0
+./ib_logfile0: 4294967280
+./ib_logfile1: 4294967280
+2021-09-14 19:03:56 11160 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-09-14 19:03:56 11160 [Note] InnoDB: Log scan progressed past the checkpoint lsn 49463
+2021-09-14 19:03:56 11160 [Note] InnoDB: Database was not shutdown normally!
+2021-09-14 19:03:56 11160 [Note] InnoDB: Starting crash recovery.
+2021-09-14 19:03:56 11160 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2021-09-14 19:03:56 11160 [Note] InnoDB: Restoring possible half-written data pages 
+2021-09-14 19:03:56 11160 [Note] InnoDB: from the doublewrite buffer...
+InnoDB: Doing recovery: scanned up to log sequence number 1600607
+2021-09-14 19:03:56 11160 [Note] InnoDB: Starting an apply batch of log records to the database...
+InnoDB: Progress in percent: 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 
+InnoDB: Apply batch completed
+2021-09-14 19:03:56 11160 [Note] InnoDB: 128 rollback segment(s) are active.
+2021-09-14 19:03:56 11160 [Note] InnoDB: Waiting for purge to start
+2021-09-14 19:03:56 11160 [Note] InnoDB: 5.6.26 started; log sequence number 1600607
+2021-09-14 19:03:56 11160 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-09-14 19:03:56 11160 [Note] IPv6 is available.
+2021-09-14 19:03:56 11160 [Note]   - '::' resolves to '::';
+2021-09-14 19:03:56 11160 [Note] Server socket created on IP: '::'.
+2021-09-14 19:03:56 11160 [ERROR] Fatal error: Can't open and lock privilege tables: Table 'mysql.user' doesn't exist
+210914 19:03:57 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
+211101 19:07:11 mysqld_safe Starting mysqld daemon with databases from /home/lbh/mysql-5.6.26/data
+Warning: World-writable config file '/home/lbh/scripts/my0.cnf' is ignored
+2021-11-01 19:07:11 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2021-11-01 19:07:11 0 [Note] /home/lbh/mysql-5.6.26/bin/mysqld (mysqld 5.6.26) starting as process 18867 ...
+2021-11-01 19:07:11 18867 [Note] Plugin 'FEDERATED' is disabled.
+/home/lbh/mysql-5.6.26/bin/mysqld: Table 'mysql.plugin' doesn't exist
+2021-11-01 19:07:11 18867 [ERROR] Can't open the mysql.plugin table. Please run mysql_upgrade to create it.
+2021-11-01 19:07:11 18867 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2021-11-01 19:07:11 18867 [Note] InnoDB: The InnoDB memory heap is disabled
+2021-11-01 19:07:11 18867 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2021-11-01 19:07:11 18867 [Note] InnoDB: Memory barrier is not used
+2021-11-01 19:07:11 18867 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2021-11-01 19:07:11 18867 [Note] InnoDB: Using Linux native AIO
+2021-11-01 19:07:11 18867 [Note] InnoDB: Using CPU crc32 instructions
+2021-11-01 19:07:11 18867 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2021-11-01 19:07:11 18867 [Note] InnoDB: Completed initialization of buffer pool
+./ibdata1: 0
+./ib_logfile0: 4294967280
+./ib_logfile1: 4294967280
+2021-11-01 19:07:11 18867 [Note] InnoDB: Highest supported file format is Barracuda.
+2021-11-01 19:07:11 18867 [Note] InnoDB: Log scan progressed past the checkpoint lsn 49463
+2021-11-01 19:07:11 18867 [Note] InnoDB: Database was not shutdown normally!
+2021-11-01 19:07:11 18867 [Note] InnoDB: Starting crash recovery.
+2021-11-01 19:07:11 18867 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2021-11-01 19:07:11 18867 [Note] InnoDB: Restoring possible half-written data pages 
+2021-11-01 19:07:11 18867 [Note] InnoDB: from the doublewrite buffer...
+InnoDB: Doing recovery: scanned up to log sequence number 1600607
+2021-11-01 19:07:11 18867 [Note] InnoDB: Starting an apply batch of log records to the database...
+InnoDB: Progress in percent: 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 
+InnoDB: Apply batch completed
+2021-11-01 19:07:12 18867 [Note] InnoDB: 128 rollback segment(s) are active.
+2021-11-01 19:07:12 18867 [Note] InnoDB: Waiting for purge to start
+2021-11-01 19:07:12 18867 [Note] InnoDB: 5.6.26 started; log sequence number 1600607
+2021-11-01 19:07:12 18867 [Note] Server hostname (bind-address): '*'; port: 3306
+2021-11-01 19:07:12 18867 [Note] IPv6 is available.
+2021-11-01 19:07:12 18867 [Note]   - '::' resolves to '::';
+2021-11-01 19:07:12 18867 [Note] Server socket created on IP: '::'.
+2021-11-01 19:07:12 18867 [ERROR] Can't start server: Bind on TCP/IP port: Address already in use
+2021-11-01 19:07:12 18867 [ERROR] Do you already have another mysqld server running on port: 3306 ?
+2021-11-01 19:07:12 18867 [ERROR] Aborting
+
+2021-11-01 19:07:12 18867 [Note] Binlog end
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'partition'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'BLACKHOLE'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_METRICS'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_CMP'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_LOCKS'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'INNODB_TRX'
+2021-11-01 19:07:12 18867 [Note] Shutting down plugin 'InnoDB'
+2021-11-01 19:07:12 18867 [Note] InnoDB: FTS optimize thread exiting.
+2021-11-01 19:07:12 18867 [Note] InnoDB: Starting shutdown...
+2021-11-01 19:07:13 18867 [Note] InnoDB: Shutdown completed; log sequence number 1600617
+2021-11-01 19:07:13 18867 [Note] Shutting down plugin 'ARCHIVE'
+2021-11-01 19:07:13 18867 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2021-11-01 19:07:13 18867 [Note] Shutting down plugin 'MEMORY'
+2021-11-01 19:07:13 18867 [Note] Shutting down plugin 'MRG_MYISAM'
+2021-11-01 19:07:13 18867 [Note] Shutting down plugin 'MyISAM'
+2021-11-01 19:07:13 18867 [Note] Shutting down plugin 'CSV'
+2021-11-01 19:07:13 18867 [Note] Shutting down plugin 'sha256_password'
+2021-11-01 19:07:13 18867 [Note] Shutting down plugin 'mysql_old_password'
+2021-11-01 19:07:13 18867 [Note] Shutting down plugin 'mysql_native_password'
+2021-11-01 19:07:13 18867 [Note] Shutting down plugin 'binlog'
+2021-11-01 19:07:13 18867 [Note] /home/lbh/mysql-5.6.26/bin/mysqld: Shutdown complete
+
+211101 19:07:13 mysqld_safe mysqld from pid file /home/lbh/mysql-5.6.26/data/lbh-server.pid ended
