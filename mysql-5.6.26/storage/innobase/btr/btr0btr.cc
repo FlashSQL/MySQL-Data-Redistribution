@@ -3053,7 +3053,7 @@ btr_page_redistribute_before_split(
 	}
 	n_uniq = dict_index_get_n_unique_in_tree(cursor->index);
 
-//btr_page_redistribute_before_split: 0. get ready
+	//0. get cur page, neigbor page info
 	block = btr_cur_get_block(cursor);
 	page = btr_cur_get_page(cursor);
 	index = btr_cur_get_index(cursor);
@@ -3121,7 +3121,7 @@ btr_page_redistribute_before_split(
 
 	ulint* offsets1;
 
-	//choose the merge page 
+	//1. choose the merge page 
 	
 	if((page_get_data_size(page)<=page_get_data_size(left_page)) && (page_get_data_size(page)<= page_get_data_size(right_page))){
 		//neighbor page has more data than cur page
@@ -3158,8 +3158,7 @@ btr_page_redistribute_before_split(
 
 				btr_page_reorganize(&next_page_cursor, cursor->index, mtr);
 				btr_page_reorganize(&page_cursor, cursor->index, mtr);
-				//ib_logf(IB_LOG_LEVEL_INFO, "first rec: %lu, last rec: %lu, last rec of right page: %lu, first rec of right page: %lu", page_rec_get_next(page_get_infimum_rec(page)), page_rec_get_prev(page_get_supremum_rec(page)), page_rec_get_prev(page_get_supremum_rec(right_page)), page_rec_get_next(page_get_infimum_rec(right_page)));
-
+				
 				is_left = FALSE;
 				max_data_size_to_move = dict_index_zip_pad_optimal_page_size(index) - page_get_data_size(right_page);
 				n_moving_recs = page_get_n_recs(page) - (page_get_n_recs(right_page)+ page_get_n_recs(page))/2;
@@ -3400,7 +3399,6 @@ btr_page_redistribute_before_split(
 
 		}
 
-		//btr_page_redistribute_before_split: 
 		//2. move records to the merge page.
 		if (is_left) { 
 			//move record list to left page
@@ -3410,6 +3408,7 @@ btr_page_redistribute_before_split(
 				index, mtr);
 
 			if (!orig_pred) {
+				//if this happens, mysql crash might occur
 				if (zip_size && page_is_leaf(page) && !dict_index_is_clust(cursor->index)) {
 					ibuf_reset_free_bits(merge_block);
 					ibuf_reset_free_bits(block);
@@ -3441,7 +3440,8 @@ btr_page_redistribute_before_split(
 			if (!orig_succ) {
 				ut_a(merge_page_zip);
 
-				//ib_logf(IB_LOG_LEVEL_INFO, "redistribute : move record list to right page failed");
+				//redistribute : move record list to right page failed
+				//if this happens, mysql crash might occur
 				if (zip_size&& page_is_leaf(page) && !dict_index_is_clust(cursor->index)) {
 					ibuf_reset_free_bits(merge_block);
 					ibuf_reset_free_bits(block);
@@ -3465,6 +3465,8 @@ btr_page_redistribute_before_split(
 		ut_a(!merge_page_zip || page_zip_validate(merge_page_zip, merge_page,
 							index));
 	#endif /* UNIV_ZIP_DEBUG */
+	
+	//5. insert cur record to redistributed page
 
 	if(insert_to_cur_page){
 		ut_a(insert_block == block);
@@ -3540,13 +3542,13 @@ btr_page_redistribute_before_split(
 	ut_ad(btr_check_node_ptr(index, right_page_block, mtr));
 	ut_ad(btr_check_node_ptr(index, block, mtr));
 
-	//5. insert cur record to redistributed page
+	
 
 
 	
-//7. update insert buffer bitmap
+	//7. update insert buffer bitmap
 
-		if (!dict_index_is_clust(cursor->index) && page_is_leaf(merge_page)) {
+	if (!dict_index_is_clust(cursor->index) && page_is_leaf(merge_page)) {
 			/* Update the free bits of the B-tree page in the
 			insert buffer bitmap.  This has to be done in a
 			separate mini-transaction that is committed before the
@@ -3586,28 +3588,26 @@ btr_page_redistribute_before_split(
 
 			}
 			
-		}
+	}
 		
-		ut_a(page_validate(merge_page, index));
-		ut_a(page_validate(page, index));
+	ut_a(page_validate(merge_page, index));
+	ut_a(page_validate(page, index));
 
-		btr_assert_not_corrupted(block, index);
-		btr_assert_not_corrupted(left_page_block, index);
-		btr_assert_not_corrupted(right_page_block, index);
+	btr_assert_not_corrupted(block, index);
+	btr_assert_not_corrupted(left_page_block, index);
+	btr_assert_not_corrupted(right_page_block, index);
 
-		if (rec != NULL) {
-			ut_ad(rec_offs_validate(rec, cursor->index, *rec_offsets));
-			return(rec);
-		}
-		else{
-
+	if (rec != NULL) {
+		ut_ad(rec_offs_validate(rec, cursor->index, *rec_offsets));
+		return(rec);
+	}else{
 		if (zip_size&& page_is_leaf(page) && !dict_index_is_clust(cursor->index)) {
 			ibuf_reset_free_bits(merge_block);
 			ibuf_reset_free_bits(block);
 		}
 			//data redistribution failed 
 			goto err_exit;
-		}
+	}
 
 err_exit:	
 		btr_cur_position(
