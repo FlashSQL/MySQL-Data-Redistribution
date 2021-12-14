@@ -3083,8 +3083,6 @@ btr_page_redistribute_before_split(
 	}
 
 
-
-//0.1. neighbor page related info
 	left_page_no = btr_page_get_prev(page, mtr);
 	right_page_no = btr_page_get_next(page, mtr);
 
@@ -3102,9 +3100,9 @@ btr_page_redistribute_before_split(
 		goto err_exit;
 	}
 	
-	//ib_logf(IB_LOG_LEVEL_INFO, "btr_page_redistribute_before_split: redistribute start");
 
-	//btr_page_redistribute_before_split: 1. check if btr_can_merge_with_page and decide whether left or right page is appropriate 
+	//btr_page_redistribute_before_split: 
+	//1. check if btr_can_merge_with_page and decide whether left or right page is appropriate 
 	
 	n_recs = page_get_n_recs(page);
     	data_size = page_get_data_size(page);
@@ -3131,18 +3129,12 @@ btr_page_redistribute_before_split(
 	
 	if((page_get_data_size(page)<=page_get_data_size(left_page)) && (page_get_data_size(page)<= page_get_data_size(right_page))){
 		//neighbor page has more data than cur page
-		//ib_logf(IB_LOG_LEVEL_INFO, "btr_page_redistribute_before_split: neighbor page has more data than cur page");
-		goto err_exit;
+				goto err_exit;
 
-	}else{
-		ib_logf(IB_LOG_LEVEL_INFO, "start: cur_page_no: %lu, cur_page data size: %lu, cur_page n_recs: %lu", buf_block_get_page_no(block), data_size, n_recs);
-		ib_logf(IB_LOG_LEVEL_INFO, "start: left_page_no: %lu, left_page data size: %lu, left_page n_recs: %lu", left_page_no, page_get_data_size(left_page), page_get_n_recs(left_page));
-		ib_logf(IB_LOG_LEVEL_INFO, "start: right_page_no: %lu, right_page data size: %lu, right_page n_recs: %lu", right_page_no, page_get_data_size(right_page), page_get_n_recs(right_page));
-		
+	}else{	
 
 		if(page_get_data_size(page)<=page_get_data_size(left_page) && page_get_data_size(page)<= page_get_data_size(right_page)){
 			//neighbor page has more data than cur page
-			//ib_logf(IB_LOG_LEVEL_INFO, "btr_page_redistribute_before_split: neighbor page has more data than cur page");
 			goto err_exit;
 
 		}
@@ -3432,7 +3424,8 @@ btr_page_redistribute_before_split(
 
 		}
 
-		//btr_page_redistribute_before_split: 2. move records to the merge page.
+		//btr_page_redistribute_before_split: 
+		//2. move records to the merge page.
 		if (is_left) { 
 			//move record list to left page
 
@@ -3486,7 +3479,6 @@ btr_page_redistribute_before_split(
 			page_cur_set_before_first(merge_block, &next_page_cursor);
 			page_cur_set_before_first(block, &page_cursor);
 
-
 			btr_page_reorganize(&next_page_cursor, cursor->index, mtr);
 			btr_page_reorganize(&page_cursor, cursor->index, mtr);
 	
@@ -3504,9 +3496,7 @@ btr_page_redistribute_before_split(
 		ut_a(insert_block == merge_block);
 	}
 	
-
 	insert_page_cursor = btr_cur_get_page_cur(cursor);
-
 
 	page_cur_search(insert_block, cursor->index, tuple,
 			PAGE_CUR_LE, insert_page_cursor);
@@ -3550,7 +3540,6 @@ btr_page_redistribute_before_split(
 	}else{
 		//delete right page father cursor (infimum changed)
 		//build new ptr for right page infimum rec and insert to right page's father page
-
 
 		compressed = btr_cur_pessimistic_delete(
 			&err, TRUE, &next_father_cursor,
@@ -3607,7 +3596,6 @@ btr_page_redistribute_before_split(
 			if (zip_size) {
 	
 					ibuf_reset_free_bits(block);
-
 					ibuf_reset_free_bits(merge_block);
 
 			} else {
@@ -3645,8 +3633,7 @@ btr_page_redistribute_before_split(
 			goto err_exit;
 		}
 
-err_exit:
-	
+err_exit:	
 		btr_cur_position(
 			index,
 			page_rec_get_nth(block->frame, nth_rec),
@@ -3741,13 +3728,6 @@ func_start:
 	|| buf_block_get_space(btr_cur_get_block(cursor)) ==srv_or_space_id){
 		tpcc_table = TRUE;
 	 }
-
-	/* mijin : page split monitoring */
-
-	if (tpcc_table &&  page_is_leaf(page)) {
-		//ib_logf(IB_LOG_LEVEL_INFO, "Before Split %lu (%lu): original =  %lu / %lu / %d / %lu / %lu / %s\n",buf_block_get_space(btr_cur_get_block(cursor)), rec_get_converted_size(cursor->index, tuple, n_ext), buf_block_get_page_no(block), page_get_n_recs(page), page_is_leaf(page), dict_index_is_clust(cursor->index), dict_index_is_unique(cursor->index), cursor->index->name);
-	}
-	/* end */
 
 	/* try to insert to the next page if possible before split */
 	rec = btr_insert_into_right_sibling(
@@ -4081,11 +4061,7 @@ func_exit:
 		buf_block_get_page_no(left_block),
 		buf_block_get_page_no(right_block));
 #endif
-	/* mijin */
-	if (tpcc_table && page_is_leaf(page)) {
-		ib_logf(IB_LOG_LEVEL_INFO, "After Split %lu (%lu): original =  %lu / %lu / %d, new =  %lu / %lu / %d\n",buf_block_get_space(btr_cur_get_block(cursor)), rec_get_converted_size(cursor->index, tuple, n_ext), (ulint)buf_block_get_page_no(block), page_get_n_recs(page), page_is_leaf(page), (ulint)buf_block_get_page_no(new_block), page_get_n_recs(new_page), page_is_leaf(new_page));
-	}
-	/* end */
+
 
 	MONITOR_INC(MONITOR_INDEX_SPLIT);
 
