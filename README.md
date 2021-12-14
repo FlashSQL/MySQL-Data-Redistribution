@@ -23,3 +23,6 @@ Our evaluation results from running OLTP benchmarks using the optimized MySQL/In
 $ git clone https://github.com/FlashSQL/MySQL-Data-Redistribution.git
 ```
 3. Run ``mysqld`` server to run MySQL.
+
+##References
+- https://dev.mysql.com/
