@@ -3054,7 +3054,6 @@ btr_page_redistribute_before_split(
 	n_uniq = dict_index_get_n_unique_in_tree(cursor->index);
 
 //btr_page_redistribute_before_split: 0. get ready
-//0.0. cur page related info
 	block = btr_cur_get_block(cursor);
 	page = btr_cur_get_page(cursor);
 	index = btr_cur_get_index(cursor);
@@ -3108,36 +3107,28 @@ btr_page_redistribute_before_split(
 	//btr_page_redistribute_before_split: 1. check if btr_can_merge_with_page and decide whether left or right page is appropriate 
 	
 	n_recs = page_get_n_recs(page);
-    data_size = page_get_data_size(page);
+    	data_size = page_get_data_size(page);
 
 	is_left = TRUE;
-
-	left_page_block = btr_block_get(space, zip_size, left_page_no, RW_X_LATCH, index,
-			       mtr);
+	left_page_block = btr_block_get(space, zip_size, left_page_no, RW_X_LATCH, index,mtr);
 	left_page = buf_block_get_frame(left_page_block);
-
-	right_page_block = btr_block_get(space, zip_size, right_page_no, RW_X_LATCH, index,
-			       mtr);
+	right_page_block = btr_block_get(space, zip_size, right_page_no, RW_X_LATCH, index, mtr);
 	right_page = buf_block_get_frame(right_page_block);
 
 	offsets = NULL;
-	
-
-	
+		
 	btr_page_get_father(
 		cursor->index, block, mtr, &father_cursor);
 
 	ulint		max_data_size_to_move;
 	
-
 	max_data_size_to_move = 0;
 	insert_block = block;
 
 	ulint* offsets1;
 
-
-
-
+	//choose the merge page 
+	
 	if((page_get_data_size(page)<=page_get_data_size(left_page)) && (page_get_data_size(page)<= page_get_data_size(right_page))){
 		//neighbor page has more data than cur page
 		//ib_logf(IB_LOG_LEVEL_INFO, "btr_page_redistribute_before_split: neighbor page has more data than cur page");
