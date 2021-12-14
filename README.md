@@ -9,8 +9,10 @@ Our evaluation results from running OLTP benchmarks using the optimized MySQL/In
 ### Experiment Result
 - TPCC-Result
 ![image](https://user-images.githubusercontent.com/55489991/145993724-fc77122f-f276-4b74-81bb-e98004c64339.png)
+
 - Index Space Utilization
-![image](https://user-images.githubusercontent.com/55489991/145993926-a14f3b45-36a9-45f7-b4f7-4275c6f46a6f.png)
+
+![image](https://user-images.githubusercontent.com/55489991/145994040-af8c83d5-0dab-4e35-b329-53c66dbe7b6b.png)
 
 
 ## Prerequisites & Installation Guide
