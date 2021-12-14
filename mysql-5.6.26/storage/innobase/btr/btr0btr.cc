@@ -3754,7 +3754,6 @@ func_start:
 		flags, cursor, offsets, *heap, tuple, n_ext, mtr);
 
 	if (rec != NULL) {
-		//ib_logf(IB_LOG_LEVEL_INFO, "page no: %lu, btr_insert_into_right_sibling() succeed",buf_block_get_page_no(block));
 		return(rec);
 	}
 	
@@ -3763,16 +3762,12 @@ func_start:
 		rec = btr_page_redistribute_before_split(flags, cursor, offsets, *heap, tuple, n_ext, mtr);
 
 		if(rec!=NULL){
-			ib_logf(IB_LOG_LEVEL_INFO, "redistribute succeed");
+			//ib_logf(IB_LOG_LEVEL_INFO, "redistribute succeed");
 			return(rec);
 			
 		}
 		else{
 			ib_logf(IB_LOG_LEVEL_INFO, "redistribute failed");
-			//page_cursor = btr_cur_get_page_cur(cursor);
-
-			//page_cur_search(block, cursor->index, tuple,
-			//	PAGE_CUR_LE, page_cursor);
 		}
 	}
 
@@ -3790,11 +3785,7 @@ func_start:
 		direction = FSP_UP;
 		hint_page_no = page_no + 1;
 		split_rec = btr_page_get_split_rec(cursor, tuple, n_ext);
-		/* lbh */
-		if(buf_block_get_space(block) == srv_ol_space_id){
-			//ib_logf(IB_LOG_LEVEL_INFO, "btr_page_split_and_insert: n_iterations > 0: Split (%lu): original =  %lu / %lu / %d / %lu / %lu / %s\n", rec_get_converted_size(cursor->index, tuple, n_ext), buf_block_get_page_no(block), page_get_n_recs(page), page_is_leaf(page), dict_index_is_clust(cursor->index), dict_index_is_unique(cursor->index), cursor->index->name);
-		/* end */}
-
+		
 		if (split_rec == NULL) {
 			insert_left = btr_page_tuple_smaller(
 				cursor, tuple, offsets, n_uniq, heap);
@@ -3803,18 +3794,11 @@ func_start:
 		direction = FSP_UP;
 		hint_page_no = page_no + 1;
 
-		/* lbh */
-		if(buf_block_get_space(block) == srv_ol_space_id){
-			//ib_logf(IB_LOG_LEVEL_INFO, "btr_page_split_and_insert: btr_page_get_split_rec_to_right: Split (%lu): original =  %lu / %lu / %d / %lu / %lu / %s",rec_get_converted_size(cursor->index, tuple, n_ext), buf_block_get_page_no(block), page_get_n_recs(page), page_is_leaf(page), dict_index_is_clust(cursor->index), dict_index_is_unique(cursor->index), cursor->index->name);
-		/* end */}
+	
 	} else if (btr_page_get_split_rec_to_left(cursor, &split_rec)) {
 		direction = FSP_DOWN;
 		hint_page_no = page_no - 1;
 
-		/* lbh */
-		if(buf_block_get_space(block) == srv_ol_space_id){
-			//ib_logf(IB_LOG_LEVEL_INFO, "btr_page_split_and_insert: btr_page_get_split_rec_to_left: Split (%lu): original =  %lu / %lu / %d / %lu / %lu / %s\n",rec_get_converted_size(cursor->index, tuple, n_ext), buf_block_get_page_no(block), page_get_n_recs(page), page_is_leaf(page), dict_index_is_clust(cursor->index), dict_index_is_unique(cursor->index), cursor->index->name);
-		/* end */}
 		ut_ad(split_rec);
 	} else {
 		direction = FSP_UP;
