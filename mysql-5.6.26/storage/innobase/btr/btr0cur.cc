@@ -1394,7 +1394,7 @@ fail_err:
 	if (index->space == srv_ol_space_id && leaf && dict_index_is_clust(index)) {
 		if (leaf && !zip_size && dict_index_is_clust(index)
 	    && page_get_n_recs(page) >= 2
-	    && ( UNIV_PAGE_SIZE/16 + rec_size) > max_size //(UNIV_PAGE_SIZE/10)
+	    && ( dict_index_get_space_reserve() + rec_size) > max_size //(UNIV_PAGE_SIZE/10)
 	    && (btr_page_get_split_rec_to_right(cursor, &dummy)
 		|| btr_page_get_split_rec_to_left(cursor, &dummy))) {
 		goto fail; 
