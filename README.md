@@ -6,6 +6,10 @@ While B-Tree is a ubiquitous index structure used in managing data, it is well k
 ## Contribution
 Our evaluation results from running OLTP benchmarks using the optimized MySQL/InnoDB prototype clearly show that those optimizations improve transaction throughput (i.e., more than 50%) with less space and cost (i.e., less than 40%) in flash storage.
 
+### Experiment Result
+![image](https://user-images.githubusercontent.com/55489991/145993724-fc77122f-f276-4b74-81bb-e98004c64339.png)
+
+
 ## Prerequisites & Installation Guide
 
 1. Install prerequisites of mysql-5.6.26. Follow the instructions in the [site](https://github.com/LeeBohyun/mysql-tpcc/blob/master/installation_guide/multi-mysql-tpcc.md).
