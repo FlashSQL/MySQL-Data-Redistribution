@@ -32,7 +32,7 @@ this program; if not, write to the Free Software Foundation, Inc.,
 *****************************************************************************/
 
 /**************************************************//**
-@file srv/srv0srv.cc
+@file /srv0srv.cc
 The database server main program
 
 Created 10/8/1995 Heikki Tuuri
@@ -342,6 +342,7 @@ UNIV_INTERN my_bool		srv_stats_auto_recalc = TRUE;
 UNIV_INTERN ibool	srv_use_doublewrite_buf	= TRUE;
 
 /* mijin */
+//declare and initialize table space id
 ulint	srv_ol_space_id	= 0;
 ulint	srv_no_space_id = 0;
 ulint	srv_stk_space_id = 0;
