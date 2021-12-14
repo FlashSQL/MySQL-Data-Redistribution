@@ -884,18 +884,8 @@ add_size:
 		/* Put the node to the LRU list */
 		UT_LIST_ADD_FIRST(LRU, system->LRU, node);
 	}
-
-	/*
-	ulint	srv_ol_space_id	= 0;
-	ulint	srv_no_space_id = 1;
-	ulint	srv_stk_space_id = 2;
-	ulint	srv_cust_space_id = 3;
-	ulint	srv_or_space_id = 4;
-	ulint	srv_dist_space_id = 5;
-	ulint	srv_wh_space_id = 6;
-	ulint	srv_itm_space_id = 7;
-	ulint	srv_his_space_id = 8;
-	*/
+	
+	//get usertable name (TPC-C benchmark)
 	/* mijin */
 	if (strcmp(node->name, "./tpcc1500/order_line.ibd") == 0) {
 		srv_ol_space_id = space->id;
