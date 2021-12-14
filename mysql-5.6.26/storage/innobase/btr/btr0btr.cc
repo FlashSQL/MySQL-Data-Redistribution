@@ -3299,9 +3299,6 @@ btr_page_redistribute_before_split(
 
 				n_moving_recs = i;
 				last_moving_rec = tmp_rec;
-
-				//ib_logf(IB_LOG_LEVEL_INFO, "left_page_merge : n_moving_recs: %lu moving_data_size= %lu, nth_rec: %lu", n_moving_recs, incl_data, nth_rec);
-				
 				
 				if(nth_rec < n_moving_recs){
 					//redistribute to left, insert to left page
