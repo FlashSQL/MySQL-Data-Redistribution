@@ -3767,18 +3767,6 @@ func_start:
 	/* lbh */	
 	/* try to redistribute to neighbor page if possible before split */
 
-	/*
-		ulint	srv_ol_space_id	= 0;
-		ulint	srv_no_space_id = 1;
-		ulint	srv_stk_space_id = 2;
-		ulint	srv_cust_space_id = 3;
-		ulint	srv_or_space_id = 4;
-		ulint	srv_dist_space_id = 5;
-		ulint	srv_wh_space_id = 6;
-		ulint	srv_itm_space_id = 7;
-		ulint	srv_his_space_id = 8;
-	*/
-
 	ibool tpcc_table = FALSE;
 
 	if(buf_block_get_space(btr_cur_get_block(cursor)) ==srv_ol_space_id
@@ -3790,7 +3778,7 @@ func_start:
 	/* mijin : page split monitoring */
 
 	if (tpcc_table &&  page_is_leaf(page)) {
-		ib_logf(IB_LOG_LEVEL_INFO, "Before Split %lu (%lu): original =  %lu / %lu / %d / %lu / %lu / %s\n",buf_block_get_space(btr_cur_get_block(cursor)), rec_get_converted_size(cursor->index, tuple, n_ext), buf_block_get_page_no(block), page_get_n_recs(page), page_is_leaf(page), dict_index_is_clust(cursor->index), dict_index_is_unique(cursor->index), cursor->index->name);
+		//ib_logf(IB_LOG_LEVEL_INFO, "Before Split %lu (%lu): original =  %lu / %lu / %d / %lu / %lu / %s\n",buf_block_get_space(btr_cur_get_block(cursor)), rec_get_converted_size(cursor->index, tuple, n_ext), buf_block_get_page_no(block), page_get_n_recs(page), page_is_leaf(page), dict_index_is_clust(cursor->index), dict_index_is_unique(cursor->index), cursor->index->name);
 	}
 	/* end */
 
