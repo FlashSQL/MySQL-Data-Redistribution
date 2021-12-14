@@ -3355,7 +3355,6 @@ btr_page_redistribute_before_split(
 					}
 
 					if(nth_rec >= n_moving_recs){
-						//ib_logf(IB_LOG_LEVEL_INFO, "insert to cur page changed");
 						insert_to_cur_page = TRUE;
 
 						if( incl_data < rec_get_converted_size(cursor->index, tuple, n_ext) || page_get_data_size(page)+rec_get_converted_size(cursor->index, tuple, n_ext)-incl_data >fil_factor){
@@ -3365,28 +3364,21 @@ btr_page_redistribute_before_split(
 						}
 					}
 					if(nth_rec == n_moving_recs){
-							//ib_logf(IB_LOG_LEVEL_INFO, "first rec of cur page");
 							goto err_exit;
 					}
 
 				}else{
-					ib_logf(IB_LOG_LEVEL_INFO, "redistribute to left, insert to cur page");
 					insert_to_cur_page = TRUE;
 					if(incl_data < rec_get_converted_size(cursor->index, tuple, n_ext) || page_get_data_size(page)+rec_get_converted_size(cursor->index, tuple, n_ext)-incl_data >=fil_factor){
-						//ib_logf(IB_LOG_LEVEL_INFO, "redistribute to left, cur page too full");
 						goto err_exit;
 					}
 				}
 				if(nth_rec == n_moving_recs){
-					//ib_logf(IB_LOG_LEVEL_INFO, "first rec of cur page");
 					goto err_exit;
 				}
 				if(n_moving_recs <3){
-					//ib_logf(IB_LOG_LEVEL_INFO, "n_moving_recs <3");
 					goto err_exit;
 				}
-
-				//ib_logf(IB_LOG_LEVEL_INFO, "left_page_merge : n_moving_recs: %lu moving_data_size= %lu, nth_rec: %lu", n_moving_recs, incl_data, nth_rec);
 
 				merge_block = left_page_block;
 				
@@ -3444,23 +3436,18 @@ btr_page_redistribute_before_split(
 		if (is_left) { 
 			//move record list to left page
 
-			
-			//ib_logf(IB_LOG_LEVEL_INFO, "first rec: %lu, last rec: %lu, last rec of left page: %lu, first rec of left page: %lu", page_rec_get_next(page_get_infimum_rec(page)), page_rec_get_prev(page_get_supremum_rec(page)), page_rec_get_prev(page_get_supremum_rec(left_page)), page_rec_get_next(page_get_infimum_rec(left_page)));
-
 			ulint	orig_pred = page_move_rec_list_start(
 				merge_block, block, last_moving_rec,
 				index, mtr);
 
 			if (!orig_pred) {
-				//ib_logf(IB_LOG_LEVEL_INFO, "redistribute : move record list to left page failed");
 				if (zip_size && page_is_leaf(page) && !dict_index_is_clust(cursor->index)) {
 					ibuf_reset_free_bits(merge_block);
 					ibuf_reset_free_bits(block);
 				}
 				goto err_exit;
 			}
-			//ib_logf(IB_LOG_LEVEL_INFO, "last moving rec: %lu, first rec: %lu, last rec: %lu, last rec of left page: %lu, first rec of left page: %lu", last_moving_rec, page_rec_get_next(page_get_infimum_rec(page)), page_rec_get_prev(page_get_supremum_rec(page)), page_rec_get_prev(page_get_supremum_rec(left_page)), page_rec_get_next(page_get_infimum_rec(left_page)));
-		
+			
 			page_cur_t prev_page_cursor;
 			page_cur_t page_cursor;
 			page_cur_set_after_last(merge_block, &prev_page_cursor);
@@ -3469,20 +3456,13 @@ btr_page_redistribute_before_split(
 			btr_page_reorganize(&prev_page_cursor, cursor->index, mtr);
 			btr_page_reorganize(&page_cursor, cursor->index, mtr);
 
-			
-			//ib_logf(IB_LOG_LEVEL_INFO, "redistribute : move record list to left page");
-			//ib_logf(IB_LOG_LEVEL_INFO, "last moving rec: %lu, first rec: %lu, last rec: %lu, last rec of left page: %lu, first rec of left page: %lu", last_moving_rec, page_rec_get_next(page_get_infimum_rec(page)), page_rec_get_prev(page_get_supremum_rec(page)), page_rec_get_prev(page_get_supremum_rec(left_page)), page_rec_get_next(page_get_infimum_rec(left_page)));
-
 		}else{
 			//move record list to right page
 
 			ibool		orig_succ;
 
 			offsets1 = btr_page_get_father_block(NULL, heap, 
-				cursor->index, right_page_block, mtr, &next_father_cursor);
-
-			//ib_logf(IB_LOG_LEVEL_INFO, "first rec: %lu, last rec: %lu, last rec of right page: %lu, first rec of right page: %lu", page_rec_get_next(page_get_infimum_rec(page)), page_rec_get_prev(page_get_supremum_rec(page)), page_rec_get_prev(page_get_supremum_rec(right_page)), page_rec_get_next(page_get_infimum_rec(right_page)));
-				
+				cursor->index, right_page_block, mtr, &next_father_cursor);				
 
 			orig_succ = page_move_rec_list_end(merge_block, block,
 							last_moving_rec,
@@ -3499,8 +3479,6 @@ btr_page_redistribute_before_split(
 				}
 				goto err_exit;
 			}
-			//ib_logf(IB_LOG_LEVEL_INFO, "last moving rec: %lu, first rec: %lu, last rec: %lu", last_moving_rec, page_rec_get_next(page_get_infimum_rec(right_page)),page_rec_get_prev(page_get_supremum_rec(right_page)));
-			//ib_logf(IB_LOG_LEVEL_INFO, "first rec: %lu, last rec: %lu, last rec of right page: %lu, first rec of right page: %lu", page_rec_get_next(page_get_infimum_rec(page)), page_rec_get_prev(page_get_supremum_rec(page)), page_rec_get_prev(page_get_supremum_rec(right_page)), page_rec_get_next(page_get_infimum_rec(right_page)));
 
 			page_cur_t next_page_cursor;
 			page_cur_t page_cursor;
@@ -3511,9 +3489,7 @@ btr_page_redistribute_before_split(
 
 			btr_page_reorganize(&next_page_cursor, cursor->index, mtr);
 			btr_page_reorganize(&page_cursor, cursor->index, mtr);
-
-			//ib_logf(IB_LOG_LEVEL_INFO, "redistribute : move record list to right page end");
-			//ib_logf(IB_LOG_LEVEL_INFO, "first rec: %lu, last rec: %lu, last rec of right page: %lu, first rec of right page: %lu", page_rec_get_next(page_get_infimum_rec(page)), page_rec_get_prev(page_get_supremum_rec(page)), page_rec_get_prev(page_get_supremum_rec(right_page)), page_rec_get_next(page_get_infimum_rec(right_page)));
+	
 		}	
 
 
@@ -3538,8 +3514,7 @@ btr_page_redistribute_before_split(
 	rec = page_cur_tuple_insert(insert_page_cursor, tuple, cursor->index,
 					rec_offsets, &heap, n_ext, mtr);
 
-	if (rec == NULL) {
-		ib_logf(IB_LOG_LEVEL_INFO, "cur page no:%lu, merge page no: %lu, insert cur rec failed", buf_block_get_page_no(block), buf_block_get_page_no(merge_block)); 
+	if (rec == NULL) {		
 		mem_heap_empty(heap);
 		rec = btr_page_split_and_insert(flags, cursor, rec_offsets, &heap, tuple, n_ext, mtr);
 	}
@@ -3629,7 +3604,6 @@ btr_page_redistribute_before_split(
 			committed mini-transaction, because in crash recovery,
 			the free bits could momentarily be set too high. */
 
-			//ib_logf(IB_LOG_LEVEL_INFO, "redistribute : ibuf_update_free_bits_zip");
 			if (zip_size) {
 	
 					ibuf_reset_free_bits(block);
@@ -3649,13 +3623,6 @@ btr_page_redistribute_before_split(
 			}
 			
 		}
-
-
-		//ib_logf(IB_LOG_LEVEL_INFO, "function end : dict_index_is_clust(cursor->index): %lu", dict_index_is_clust(cursor->index));
-		//ib_logf(IB_LOG_LEVEL_INFO, "end : insert_to_cur_page: %lu",insert_to_cur_page);
-		ib_logf(IB_LOG_LEVEL_INFO, "end : cur_page_no: %lu, cur_page data size: %lu, cur_page n_recs: %lu", buf_block_get_page_no(block), page_get_data_size(page), page_get_n_recs(page));
-		ib_logf(IB_LOG_LEVEL_INFO, "end : left_page_no: %lu, left_page data size: %lu, left_page n_recs: %lu", left_page_no, page_get_data_size(left_page), page_get_n_recs(left_page));
-		ib_logf(IB_LOG_LEVEL_INFO, "end : right_page_no: %lu, right_page data size: %lu, right_page n_recs: %lu", right_page_no, page_get_data_size(right_page), page_get_n_recs(right_page));
 		
 		ut_a(page_validate(merge_page, index));
 		ut_a(page_validate(page, index));
@@ -3674,7 +3641,7 @@ btr_page_redistribute_before_split(
 			ibuf_reset_free_bits(merge_block);
 			ibuf_reset_free_bits(block);
 		}
-			ib_logf(IB_LOG_LEVEL_INFO, "insert cur rec failed 2");
+			//data redistribution failed 
 			goto err_exit;
 		}
 
