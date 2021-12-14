@@ -24,5 +24,13 @@ $ git clone https://github.com/FlashSQL/MySQL-Data-Redistribution.git
 ```
 3. Run ``mysqld`` server to run MySQL.
 
+## Modified files compared to Vanilla MySQL
+- storage/innobase/btr/btr0btr.cc
+- storage/innobase/fil/fil0fil.cc
+- storage/innobase/srv/srv0srv.cc
+- storage/innobase/include/btr0btr.h
+- storage/innobase/include/srv0srv.h
+- storage/innobase/include/fil0fil.h
+
 ## References
 - https://dev.mysql.com/
