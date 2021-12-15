@@ -4,7 +4,7 @@
 While B-Tree is a ubiquitous index structure used in managing data, it is well known for its low space utilization in nodes. Such space under-utilization is detrimental to flash storage in terms of cost and performance. In particular, the logical space waste in B-tree will amplify physical writes inside flash storage, worsening the transaction throughput.
 
 ## Contribution
-Our evaluation results from running OLTP benchmarks using the optimized MySQL/InnoDB prototype clearly show that those optimizations improve transaction throughput (i.e., more than 50%) with less space and cost (i.e., less than 40%) in flash storage.
+Our evaluation results from running OLTP benchmarks(TPC-C) using the data redistribution MySQL clearly show that those optimizations improve transaction throughput (i.e., more than 50%) with less space and cost (i.e., less than 40%) in flash storage.
 
 ### Experiment Result
 - TPCC-Result
