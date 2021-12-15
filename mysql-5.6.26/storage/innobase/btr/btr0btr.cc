@@ -3229,7 +3229,7 @@ btr_page_redistribute_before_split(
 					}
 					if(nth_rec < n_recs - n_moving_recs){
 						insert_to_cur_page = TRUE;
-
+						//insert page choosing
 						if( incl_data < rec_get_converted_size(cursor->index, tuple, n_ext) || page_get_data_size(page)+rec_get_converted_size(cursor->index, tuple, n_ext)-incl_data >fil_factor){
 							//insert to cur page changed, page too full, goto err_exit
 							goto err_exit;							
