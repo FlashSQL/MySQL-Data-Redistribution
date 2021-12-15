@@ -3262,7 +3262,7 @@ btr_page_redistribute_before_split(
 				page_cur_set_before_first(merge_block, &prev_page_cursor);
 				page_cur_set_before_first(block, &page_cursor);
 
-
+				//setting parent node and its current cursor
 				btr_page_reorganize(&prev_page_cursor, cursor->index, mtr);
 				btr_page_reorganize(&page_cursor, cursor->index, mtr);
 				
