@@ -1389,8 +1389,10 @@ fail_err:
 	future updates of records. */
 
 	/* mijin */
+	// for changing reserved free space for future updates
+	// delivery split can be prevented
 	/*  if space id == order_line table id :
-	     start dict_index_get_space_reserve()*/
+	     origin dict_index_get_space_reserve()*/
 	if (index->space == srv_ol_space_id && leaf && dict_index_is_clust(index)) {
 		if (leaf && !zip_size && dict_index_is_clust(index)
 	    && page_get_n_recs(page) >= 2
