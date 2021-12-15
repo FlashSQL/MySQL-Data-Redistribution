@@ -4044,7 +4044,7 @@ func_exit:
 
 	ut_ad(!rec || rec_offs_validate(rec, cursor->index, *offsets));
 
-
+	//return record before split and don't split
 	return(rec);
 }
 
