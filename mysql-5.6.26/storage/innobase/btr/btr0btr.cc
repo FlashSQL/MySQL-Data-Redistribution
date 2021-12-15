@@ -2994,6 +2994,15 @@ btr_insert_into_right_sibling(
 	return(rec);
 }
 /* lbh */
+/* function flow
+0. get cur, left, right page info
+1. choose the merge page(left/right) and check the position of the inserted record
+2. choose how many records to move
+3. move record list to the merge page
+4. insert one record
+5. update father node pointer
+6. update bitmap
+*/
 
 /*@return inserted record */
 static
@@ -3488,7 +3497,7 @@ btr_page_redistribute_before_split(
 	}
 
 	
-	//6. readjust father cursor of merge block and cur block
+	//6. readjust father cursor of merge block and cur block since the first record changed
 	ibool 		compressed;
 	dberr_t	err;
 	level = btr_page_get_level(page, mtr);
@@ -3537,17 +3546,13 @@ btr_page_redistribute_before_split(
 			flags, cursor->index, level + 1, node_ptr, mtr);
 
 	}
-	//logging
+	//for debug mode: logging
 	ut_ad(btr_check_node_ptr(index, left_page_block, mtr));
 	ut_ad(btr_check_node_ptr(index, right_page_block, mtr));
 	ut_ad(btr_check_node_ptr(index, block, mtr));
 
 	
-
-
-	
 	//7. update insert buffer bitmap
-
 	if (!dict_index_is_clust(cursor->index) && page_is_leaf(merge_page)) {
 			/* Update the free bits of the B-tree page in the
 			insert buffer bitmap.  This has to be done in a
