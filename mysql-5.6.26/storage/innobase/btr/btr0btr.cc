@@ -3898,7 +3898,7 @@ insert_empty:
 		right_block = block;
 
 		lock_update_split_left(right_block, left_block);
-	} else {
+	} else {//FSP_UP situation
 		/*		fputs("Split right\n", stderr); */
 
 		if (0
