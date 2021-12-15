@@ -39,5 +39,8 @@ $ git clone https://github.com/FlashSQL/MySQL-Data-Redistribution.git
 - btr_page_redistribute_before_split() is called during btr_page_split_and_insert()(btr0btr.cc) before split is performed
 - modifications in srv0srv and fil0fil are for adding table id and table name
 
+## Future Work
+We are planning to create additonal branches (MySQL-5.7, MySQL-5.8) for porting.
+
 ## References
 - https://dev.mysql.com/
