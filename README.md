@@ -23,6 +23,7 @@ Our evaluation results from running OLTP benchmarks using the optimized MySQL/In
 $ git clone https://github.com/FlashSQL/MySQL-Data-Redistribution.git
 ```
 3. Run ``mysqld`` server to run MySQL.
+4. Compare with Vanilla MySQL and see how table size changes
 
 ## Modified files compared to Vanilla MySQL
 - storage/innobase/btr/btr0btr.cc
