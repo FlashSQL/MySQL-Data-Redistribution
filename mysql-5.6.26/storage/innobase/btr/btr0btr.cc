@@ -3420,7 +3420,7 @@ btr_page_redistribute_before_split(
 			page_cur_t page_cursor;
 			page_cur_set_after_last(merge_block, &prev_page_cursor);
 			page_cur_set_before_first(block, &page_cursor);
-
+			// if not reorganize, there is some error about current cursor
 			btr_page_reorganize(&prev_page_cursor, cursor->index, mtr);
 			btr_page_reorganize(&page_cursor, cursor->index, mtr);
 
