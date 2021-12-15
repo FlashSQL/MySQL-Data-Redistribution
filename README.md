@@ -33,9 +33,10 @@ $ git clone https://github.com/FlashSQL/MySQL-Data-Redistribution.git
 - storage/innobase/include/fil0fil.h
 
 ## Implementation Details about Data Redistritbution
-- added a new function: btr_page_redistribute_before_split()
+- added a new function in btr0btr.cc: btr_page_redistribute_before_split()
 - returns the inserted record
-- called during btr_page_split_and_insert()
+- called during btr_page_split_and_insert()(btr0btr.cc)
+- modifications in srv0srv and fil0fil is for adding table id and table name
 
 ## References
 - https://dev.mysql.com/
