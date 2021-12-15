@@ -3537,7 +3537,7 @@ btr_page_redistribute_before_split(
 			flags, cursor->index, level + 1, node_ptr, mtr);
 
 	}
-	
+	//logging
 	ut_ad(btr_check_node_ptr(index, left_page_block, mtr));
 	ut_ad(btr_check_node_ptr(index, right_page_block, mtr));
 	ut_ad(btr_check_node_ptr(index, block, mtr));
