@@ -2385,13 +2385,7 @@ split_at_new:
 			search position just by looking at the records on this
 			page. */
 
-			/* lbh */
-			//last_rec = page_rec_get_prev(page_get_supremum_rec(page));
-			//*split_rec = page_rec_get_prev(last_rec);
 			*split_rec = next_next_rec;
-			//origin *split_rec = next_next_rec;
-			
-			/* end */
 		}
 
 		return(TRUE);
@@ -3095,7 +3089,6 @@ btr_page_redistribute_before_split(
 	left_page_no = btr_page_get_prev(page, mtr);
 	right_page_no = btr_page_get_next(page, mtr);
 
-	//if(adjust)
 	nth_rec = page_rec_get_n_recs_before(btr_cur_get_rec(cursor));
 	ut_ad(nth_rec > 0);
 
@@ -3106,8 +3099,6 @@ btr_page_redistribute_before_split(
 	if(btr_page_get_level(btr_root_get(index, mtr), mtr) <2){
 		goto err_exit;
 	}
-	
-	//1. check if btr_can_merge_with_page and decide whether left or right page is appropriate 
 	
 	n_recs = page_get_n_recs(page);
     	data_size = page_get_data_size(page);
@@ -3295,8 +3286,7 @@ btr_page_redistribute_before_split(
 							offsets, ULINT_UNDEFINED,
 							&heap);
 					incl_data += rec_offs_size(offsets);
-					//ib_logf(IB_LOG_LEVEL_INFO, " max_ins_size: %lu, max_data_size_to_move: %lu, i: %lu, tmp_rec: %lu", max_ins_size, incl_data, i, tmp_rec);
-
+					
 					if(incl_data > max_ins_size){
 						incl_data -= rec_offs_size(offsets);
 						break;
