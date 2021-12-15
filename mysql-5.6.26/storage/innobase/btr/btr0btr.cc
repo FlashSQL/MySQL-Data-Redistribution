@@ -3714,10 +3714,10 @@ func_start:
 	/* lbh */	
 	/* try to redistribute to neighbor page if possible before split */
 	//call data redistribution before split
-
+		
 	if (tpcc_table &&  page_is_leaf(page)){
 		rec = btr_page_redistribute_before_split(flags, cursor, offsets, *heap, tuple, n_ext, mtr);
-
+		//using it when and only TPC-C runs 
 		if(rec!=NULL){
 			//redistribute succeed
 			return(rec);			
