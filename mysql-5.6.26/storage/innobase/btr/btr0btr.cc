@@ -3695,6 +3695,7 @@ func_start:
 
 	// current evaluation is based on TPC-C benchmark
 	ibool tpcc_table = FALSE;
+	// below code is optimizing redistribute to TPC-C benchmark
 
 	if(buf_block_get_space(btr_cur_get_block(cursor)) ==srv_ol_space_id
 	|| buf_block_get_space(btr_cur_get_block(cursor)) ==srv_his_space_id
