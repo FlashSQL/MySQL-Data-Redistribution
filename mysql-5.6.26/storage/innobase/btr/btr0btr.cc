@@ -3110,7 +3110,7 @@ btr_page_redistribute_before_split(
 	right_page = buf_block_get_frame(right_page_block);
 
 	offsets = NULL;
-		
+	//same as other function at mysql 5.6.26
 	btr_page_get_father(
 		cursor->index, block, mtr, &father_cursor);
 
