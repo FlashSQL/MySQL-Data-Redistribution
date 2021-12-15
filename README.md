@@ -32,5 +32,10 @@ $ git clone https://github.com/FlashSQL/MySQL-Data-Redistribution.git
 - storage/innobase/include/srv0srv.h
 - storage/innobase/include/fil0fil.h
 
+## Implementation Details about Data Redistritbution
+- added a new function: btr_page_redistribute_before_split()
+- returns the inserted record
+- called in btr_page_split_and_insert()
+
 ## References
 - https://dev.mysql.com/
