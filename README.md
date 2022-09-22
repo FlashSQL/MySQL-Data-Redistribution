@@ -25,15 +25,10 @@ $ git clone https://github.com/FlashSQL/MySQL-Data-Redistribution.git
 3. Run ``mysqld`` server to run MySQL.
 4. Compare with Vanilla MySQL and see how table size changes
 
-## Modified files compared to Vanilla MySQL
-- storage/innobase/btr/btr0btr.cc
-- storage/innobase/fil/fil0fil.cc
-- storage/innobase/srv/srv0srv.cc
-- storage/innobase/include/btr0btr.h
-- storage/innobase/include/srv0srv.h
-- storage/innobase/include/fil0fil.h
+
 
 ## Implementation Details about Data Redistritbution
+- reserved free space are applied according to the record sizes and update pattern
 - added a new function in btr0btr.cc: btr_page_redistribute_before_split()
 - returns the inserted record
 - btr_page_redistribute_before_split() is called during btr_page_split_and_insert()(btr0btr.cc) before split is performed
